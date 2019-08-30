@@ -1,0 +1,25 @@
+<div class="container">
+    <h2 class="text-center">Exercise 2</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col" style="color: #0087ff">Hình</th>
+                <th scope="col" style="color: #0087ff">Họ và Tên</th>
+                <th scope="col" style="color: #0087ff">Ngày Sinh</th>
+                <th scope="col" style="color: #0087ff">Giới Tính</th>
+                <th scope="col" style="color: #0087ff">Điểm</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let student of students '>
+                <td><img src="{{student.photo}}" width="70px " height="auto" alt="student.fullname"></td>
+
+                <td>{{student.fullname}}</td>
+                <td>{{student.birthday}}</td>
+                <td>{{student.gender}}</td>
+                <td>{{student.mark}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
