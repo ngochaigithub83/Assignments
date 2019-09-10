@@ -52,7 +52,6 @@ export class Bai3Component implements OnInit {
     }
     this.quantities[id] = count;
   }
-
   totalPrice() {
     let total = 0;
     for (let product of this.products) {
@@ -61,7 +60,6 @@ export class Bai3Component implements OnInit {
     }
     return total;
   }
-
   ngOnInit() {
   }
 

@@ -1,0 +1,41 @@
+<div class="card">
+    <h5 class="card-header">
+        Giỏ Hàng Của Bạn
+    </h5>
+    <div class="card-body">
+
+
+        <table class="table mt-2" id="searchTextResults">
+            <thead class="text-primary table-borderless">
+                <th><button class="btn btn-secondary">
+                        Image
+                    </button></th>
+                <th>Product</th>
+                <th>Code</th>
+                <th>Available</th>
+                <th>Price</th>
+                <th>5 Star Rating</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td>
+                        <img [src]="product.imageUrl" alt="" width="50px" height="45px">
+                    </td>
+                    <td>
+                        {{product.productName}}
+                    </td>
+                    <td>{{product.productCode}}</td>
+                    <td>{{product.releaseDate}}</td>
+                    <td>{{product.price | currency}}</td>
+                    <td>
+                        <div style="text-align:center">
+                            <star-rating [value]="product.starRating" checkedcolor="black" uncheckedcolor="white"
+                                size="24px"></star-rating>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#" class="btn btn-secondary" style="text-align: end">Thanh Toán</a>
+    </div>
+</div>
