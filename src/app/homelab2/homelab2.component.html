@@ -1,13 +1,14 @@
-<div class="alert alert-dark">Home / <span><a routerLink="/">student</a></span></div>
+<button type="button" class="btn btn-outline-danger btn-block">Home / <span><a>Sinh Viên</a></span></button>
+<!-- <div class="alert alert-success ">Home / <span><a>Sinh Viên</a></span></div> -->
 <div class="card">
-    <div class="card-header">
+    <div class="card-header" style="background: blanchedalmond">
         <span><i class="fas fa-table"></i></span>
-        List of Students
+        Danh Sách Sinh Viên
     </div>
     <div class="card-body">
         <form action="" class="form-inline">
             <input type="text" class="form-control" placeholder="Search for..." name="search" [(ngModel)]="searchText">
-            <a href="#" class="btn btn-primary"><i class="fas fa-search"></i></a>
+            <!-- <a href="#" class="btn btn-primary"><i class="fas fa-search"></i></a> -->
         </form>
         <table class="table table-bordered mt-1">
             <thead>
@@ -23,26 +24,29 @@
                     <td>{{ student.enrollmentDate | date:"dd/MM/yyyy" }}</td>
                     <td>
                         <a [routerLink]="['/student', student.id]">
-                            <i class="fas fa-info-circle text-danger mr-1"></i>
+                            <!-- <i class="fas fa-info-circle text-danger mr-1"></i> -->
+                            <button type="button" class="btn btn-outline-warning btn-sm">i</button>
                         </a>
-                        <i class="far fa-trash-alt" (click)="onDeleteStudent(student.id)"></i>
+                        <!-- <i class="far fa-trash-alt" (click)="onDeleteStudent(student.id)"></i> -->
+                        <button type="button" class="btn btn-outline-secondary btn-sm"
+                            (click)="onDeleteStudent(student.id)">Delete</button>
                     </td>
                 </tr>
             </tbody>
             <ng-template #nothing>
                 <tr>
-                    <td colspan="4">Nothing...</td>
+                    <td colspan=" 4">Nothing...</td>
                 </tr>
             </ng-template>
         </table>
     </div>
-    <div class="card-footer pb-0">
-        <div class="row">
-            <div class="col-sm-3">
-                showing {{config.currentPage}} of {{listStudents.length/config.itemsPerPage | number:"1.0-0" }}
-            </div>
-            <pagination-controls (pageChange)="pageChanged($event)" class="col-sm-7 offset-sm-2"></pagination-controls>
+    <div class="card-footer pb-0" style="background: blanchedalmond"> 
+        <div class=" row">
+        <div class="col-sm-2">
+            Showing {{config.currentPage}} of {{listStudents.length/config.itemsPerPage | number:"1.0-0" }}
         </div>
-
+        <pagination-controls (pageChange)="pageChanged($event)" class="col-sm-7 offset-sm-2"></pagination-controls>
     </div>
+
+</div>
 </div>

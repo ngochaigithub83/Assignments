@@ -1,13 +1,15 @@
-<div class="alert alert-dark">Home / <span><a routerLink="/">student</a> / {{ student.lastName }}</span></div>
+<!-- <div class="alert alert-dark">Home / <span><a routerLink="/page2">Sinh Viên</a> / {{ student.lastName }}</span></div> -->
+<button type="button" class="btn btn-outline-warning btn-block">Home / <span><a routerLink="/page2">Sinh Viên</a> /
+        {{ student.lastName }}</span></button>
 <div class="card">
-    <div class="card-header">
+    <div class="card-header" style="background: blanchedalmond">
         <span><i class="fas fa-table"></i></span>
-        Details
+        Chi Tiết
     </div>
     <div class="card-body">
-        <p><strong>First Name: </strong>{{ student.firstName }}</p>
-        <p><strong>Last Name: </strong> {{ student.lastName }}</p>
-        <p><strong>Enroll Date: </strong>{{ student.enrollmentDate | date:"dd/MM/yyyy" }}</p>
+        <p><strong>Last Name: <br> </strong> {{ student.lastName }}</p>
+        <p><strong>First Name: <br></strong>{{ student.firstName }}</p>
+        <p><strong>Enroll Date:<br> </strong>{{ student.enrollmentDate | date:"dd/MM/yyyy" }}</p>
         <table class="table table-bordered">
             <thead>
                 <th>Course Title</th>
@@ -17,13 +19,13 @@
             <tbody>
                 <tr *ngFor="let enrollment of enrollments">
                     <td>{{ courses[enrollment.courseId].title }}</td>
-                    <td>{{ enrollment.grade.charCodeAt(0) }} {{ enrollment.grade }}</td>
+                    <td>{{ enrollment.grade.charCodeAt(0) }} </td>
                     <td>{{ courses[enrollment.courseId].credits }}</td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div class="card-footer">
+    <div class="card-footer" style="background: blanchedalmond">
         <a routerLink="/page2">
             <strong>
                 <span style="font-size: 25px;">&#x2190;</span>

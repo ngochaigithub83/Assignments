@@ -23,7 +23,7 @@ export class Homelab2Component implements OnInit {
   searchText
   listStudents = []
   onDeleteStudent(id) {
-    let isDelete = confirm("Are you sure delete this student?")
+    let isDelete = confirm("Xác Nhận Xóa ???")
     if (isDelete) {
       let temp = this.listStudents.filter(student => {
         return student.id !== id
