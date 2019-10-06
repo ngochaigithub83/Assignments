@@ -6,31 +6,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bai3.component.css']
 })
 export class Bai3Component implements OnInit {
+  total = {
+    sl: null,
+    dg: null,
+  }
   products = [
     {
       id: 'pd100',
-      image: 'assets/images/6.jpg',
-      name: 'Laptop',
+      name: 'Nước Ngọt',
       price: 30000,
     },
     {
       id: 'pd101',
-      image: 'assets/images/7.jpg',
-      name: "Mobile",
+      name: 'Cà Phê Đen',
       price: 54000
     },
     {
       id: 'pd102',
-      image: 'assets/images/8.jpg',
-      name: 'Smart Watch',
+      name: 'Thuốc Lá',
       price: 22000
     },
-    {
-      id: 'pd103',
-      image: 'assets/images/9.jpg',
-      name: 'Head Phone',
-      price: 13000
-    }
+
   ];
 
   quantities = {};
@@ -62,5 +58,9 @@ export class Bai3Component implements OnInit {
   }
   ngOnInit() {
   }
+  ThanhTien() {
+    let s = this.total.sl * this.total.dg
 
+    return s;
+  }
 }

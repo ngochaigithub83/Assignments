@@ -1,49 +1,56 @@
 <!-- <app-nav-header-exercise03></app-nav-header-exercise03> -->
 <div class="container">
     <div class="ex3">
-        <h2 class="text-center">Exercise 3</h2>
+
         <table class="table table-bordered text-center mt-2">
             <thead>
-                <th>ID</th>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Action</th>
+                <th>Tên Hàng</th>
+                <th>Số Lượng</th>
+                <th>Đơn Giá</th>
+                <th>Thành Tiền</th>
+
             </thead>
             <tbody *ngFor="let product of products">
                 <tr>
-                    <td>{{ product.id }}</td>
-                    <td>
-                        <img [src]="product.image" alt="" width="65px" height="55px">
-                    </td>
                     <td valign="baseline">{{ product.name }}</td>
-                    <td>{{ product.price }}</td>
-                    <!-- | currency:"VND"  bo vo tren co chu đ-->
-                    <td>{{ quantities[product.id] }}
-                        <div class="btn-group ml-3">
-                            <button class="btn btn-outline-warning btn-sm"
-                                (click)="onIncreaseQuantities(product.id)">+</button>
-                            <button class="btn btn-outline-secondary btn-sm"
-                                (click)="onDecreaseQuantities(product.id)">-</button>
+
+                    <td>
+                        <div class="form-group">
+
+                            <input type="number" class="form-control" [(ngModel)]="total.sl"
+                                [ngModelOptions]="{standalone: true}">
                         </div>
                     </td>
                     <td>
-                        <!-- <button class="btn btn-outline-success btn-sm">View
+                        <div class="input-group">
+                            <select class="custom-select" [(ngModel)]="total.dg" [ngModelOptions]="{standalone: true}">
+                                <option *ngFor='let t of products' value="{{t.price}}">{{t.price}}</option>
+
+                            </select>
+                        </div>
+                    </td>
+                    <!-- | currency:"VND"  bo vo tren co chu đ-->
+
+                    <!-- <td>
+                        <button class="btn btn-outline-success btn-sm">View
                         </button>
-                        <button class="btn btn-outline-dark btn-sm">Delete</button> -->
+                        <button class="btn btn-outline-dark btn-sm">Delete</button>
                         <div class="asdbuton">
                             <button type="button" class="btn btn-outline-secondary" data-toggle="modal"
                                 data-target="#exampleModalScrollable">
                                 <i class='fas fa-shopping-cart' style="color:red;"></i> Mua Hàng</button>
                         </div>
-                    </td>
+                    </td> -->
+
+
+                    <div class="alert alert-secondary" role="alert">
+                        {{ThanhTien()}}
+                    </div>
+
                 </tr>
+
             </tbody>
-            <tr>
-                <td>Total Price</td>
-                <td colspan="5" style="text-align: right">{{ totalPrice() }}</td>
-            </tr>
+
         </table>
 
 
@@ -77,13 +84,13 @@
                     <button type="button" class="btn btn-outline-dark btn-lg btn-block">Pay</button>
 
                 </div>
-                <div class="modal-footer">
+                <!-- <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     <a href="bai/5">
                         <font color="black">Need</font>
                         <font color="blue">Help?</font>
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
