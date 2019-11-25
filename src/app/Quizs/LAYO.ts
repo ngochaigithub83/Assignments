@@ -209,7 +209,7 @@ export const LAYO = [
     },
     {
         "Id": 25669,
-        "Text": "Xác định luật css viết sai trong đoạn mã sau: \u003cdiv id=\"header\"\u003e     \u003cdiv id=\"banner\"\u003e         \u003cimg src=\"Images/Banner.jpg\" /\u003e         \u003cp id=\"logo\"\u003eViệt Nam Xuất Khẩu\u003c/p\u003e     \u003c/div\u003e     \u003cdiv id=\"menu\"\u003e \u003c/div\u003e \u003c/div\u003e",
+        "Text": "Xác định luật css viết sai trong đoạn mã sau: \u003cdiv id=\"header\"\u003e     \u003cdiv id=\"banner\"\u003e         \u003cimg src=\"Images/Banner.jpg\" /\u003e         \u003cp id=\"logo\"\u003eViệt Nam Xuất Khẩu\u003c/p\u003e\u003c/div\u003e\u003cdiv id=\"menu\"\u003e \u003c/div\u003e \u003c/div\u003e",
         "Marks": 1,
         "AnswerId": 106265,
         "Answers": [

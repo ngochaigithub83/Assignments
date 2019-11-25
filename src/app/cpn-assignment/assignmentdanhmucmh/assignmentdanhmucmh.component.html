@@ -13,7 +13,7 @@
                         Chủ</a>
                 </li>
                 <li class="nav-item ">
-                    <!--thêm active nó sẽ kh lick được  nav-item active-->
+
                     <a class="nav-link" href="gioithieu/"><i style="font-size:20px" class="fa">&#xf03a;</i> Giới Thiệu
                         <span class="sr-only">(current)</span></a>
                 </li>
@@ -50,21 +50,9 @@
             </div>
         </div>
     </nav>
-
     <br>
-
     <div class="row">
         <div class="col-md-8">
-            <!-- <div class="card" style="padding-top: 20px">
-            <div class="card-body">
-                <h5 class="card-title">FRONT_END FRAMEWORK</h5>
-                <p class="card-text">It use utility classes for typograpphy and spacing to space content out within
-                    the
-                    lafger
-                    container.</p>
-                <a href="#" class="btn btn-primary">Xem Thêm ...</a>
-            </div>
-        </div> -->
             <div class="list-exam container row">
                 <div class="content col-md-10 row">
                     <div class="card col-5 col-md-5" *ngFor="let subject of listSubjects">
@@ -77,37 +65,9 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
-
-
         </div>
-        <!-- end col-md-8 -->
-
         <div class="col-md-4">
-            <!-- <div class="giohang">
-            <div class=" card">
-                <div class="card-body">
-                    <img src=" ../assets/images/shopping.gif" class="card-img-top" style="width: 4rem;">
-                    <p>
-                        100 items<br>
-                        & 56.8<br>
-
-                        <a href="#">view cart</a>
-                    </p>
-                </div>
-            </div>
-
-        </div> -->
-
-            <!-- <div class="from">
-            <div class="row" style="border: 2px solid lightgrey; margin: 1em 0 1em 0">
-                <div class="col-sm-12" style="margin-top: 1em; margin-bottom: 1em">
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-            </div>
-        </div> -->
             <div class="accordion" id="accordionExample">
                 <div class="card">
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
@@ -135,77 +95,7 @@
                         </ul>
                     </div>
                 </div>
-
-                <!-- <div class="card">
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                    data-parent="#accordionExample">
-                    <ul class="list-group">
-                        <li class="list-group-item" data-toggle="collapse" data-target="#station">
-                            <i class='fas fa-table' style='font-size:24px'></i> NHÀ CUNG CẤP</li>
-                        <div id="demo" class="collapse">
-                            <ul class="list-group">
-                                <li class="list-group-item" [routerLink]="['/dienthoai']">Điện thoại di động</li>
-                                <li class="list-group-item">Máy tính xách tay</li>
-                                <li class="list-group-item">Máy tính để bàn</li>
-                                <li class="list-group-item">Quạt máy</li>
-                                <li class="list-group-item">Tivi</li>
-                                <li class="list-group-item">Tủ lạnh</li>
-                            </ul>
-                        </div>
-                    </ul>
-                </div>
             </div>
-            <div class="card">
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                    data-parent="#accordionExample">
-                    <ul class="list-group">
-                        <li class="list-group-item" data-toggle="collapse" data-target="#station1">
-                            <i class='fas fa-star' style='font-size:24px'></i> HÀNG ĐẶC BIỆT</li>
-                        <div id="demo" class="collapse">
-                            <ul class="list-group">
-                                <li class="list-group-item" [routerLink]="['/dienthoai']">Điện thoại di động</li>
-                                <li class="list-group-item">Máy tính xách tay</li>
-                                <li class="list-group-item">Máy tính để bàn</li>
-                                <li class="list-group-item">Quạt máy</li>
-                                <li class="list-group-item">Tivi</li>
-                                <li class="list-group-item">Tủ lạnh</li>
-                            </ul>
-                        </div>
-                    </ul>
-                </div>
-            </div> -->
-
-            </div>
-            <!-- end card accordion -->
         </div>
-        <!-- end col-md-4 -->
     </div>
-    <!-- end row -->
-    <!-- hiện thông báo -->
-    <!-- <form #userlogin="ngForm" (ngSubmit)="onClickSubmit(userlogin.value)">
-        <input type="text" name="emailid" placeholder="emailid" ngModel>
-        <br />
-        <input type="password" name="passwd" placeholder="passwd" ngModel>
-        <br />
-        <input type="submit" value="submit">
-    </form> -->
-    <!-- lưu tên tài khoản -->
-    <!-- <div>
-        <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
-            <input type="text" class="fortextbox" name="emailid" placeholder="emailid" formControlName="emailid">
-            <br />
-
-            <input type="password" class="fortextbox" name="passwd" placeholder="passwd" formControlName="passwd">
-            <br />
-
-            <input type="submit" class="forsubmit" value="Log In">
-        </form>
-    </div>
-    <p>
-        Email entered is : {{emailid}}
-    </p> -->
-    <!-- kiểm tra tài khoản và mật khẩu có hợp lệ không -->
-    <br>
-
-
 </div>
